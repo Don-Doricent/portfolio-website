@@ -56,9 +56,3 @@ Coming soon: [Netlify Deployment](https://your-site.netlify.app)
 Have a project or QA/dev role I’d be a fit for? Let’s connect.  
 📧 ddoricent97@gmail.com  
 🌐 [LinkedIn](https://linkedin.com/in/donald-doricent)
-
----
-
-## 📌 License
-
-MIT

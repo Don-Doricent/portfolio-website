@@ -6,10 +6,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Donald Doricent's Portfolio</title>
 </head>
-<body class="min-h-screen flex items-center justify-center flex-col bg-gradient-to-b from-indigo-50 via-indigo-100 to-indigo-200">
-    <header class="fixed top-0 right-0 left-0">
-        <div class="container mx-auto px-4 flex items-center justify-between py-6 bg-indigo-100 shadow-lg rounded-lg">
-            <a href="#" class="text-indigo-600 font-bold text-xl">My Logo</a>
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-indigo-50 via-indigo-100 to-indigo-200">
+    <header class="fixed top-0 left-0 w-full bg-indigo-100 shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between py-6">
+            <a href="#" class="text-indigo-600 font-bold text-xl">Donald Doricent</a>
 
     <!-- Need to group nav with button  -->
         <div class="flex items-center space-x-4">
@@ -18,22 +18,37 @@
                 <a href="#projects" class="hover:text-indigo-600">Projects</a>
                 <a href="#contact" class="hover:text-indigo-600">Contact</a>
             </nav>
-            <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-md transition duration-500">Menu</button>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-md transition duration-300">Menu</button>
         </div>
         </div>
     </header>
 
 
-    <section>
+    <section class="text-center pt-4 mt-32 mx-auto max-w-3xl">
         <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">
-            Hi, I'm Don
+            Web Devloper & Quality Assurance Engineer
         </h1>
+        <p class="mt-4 text-base md:text-xl text-gray-700 max-w-xl mx-auto">Passionate about clean code, clear tests, and building reliable softawre experiences.</p>
     </section>
+
+    <hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm"> <!-- Divider between sections-->
+
     <section id="about" class="pt-40">
-        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">
+        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600 text-center">
             About Me
         </h1>
+        <p class="mt-4 text-base md:text-xl text-gray-700 max-w-xl mx-auto">I’m a self-taught Web developer and QA engineer who blends testing discipline with web development. I’ve written test plans, manual cases, automated flows with Python/Selenium, and build in the MERN stack.</p>
+    </section>
+    <hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm"> <!-- Divider between sections-->
 
+    <section id="projects" class="pt-40 w-full px-4">
+        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600 text-center">
+            Projects
+        </h1>
+        <div class="flex flex-col md:flex-row space-x-4 py-6 font-bold text-indigo-600">
+            <div class="bg-white p-4 flex-grow">project 1</div>
+            <div class="bg-white p-4 flex-grow">project 2</div>
+        </div>
     </section>
     
 

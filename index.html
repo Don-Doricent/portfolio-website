@@ -7,17 +7,31 @@
     <meta name="author" content="Donald Doricent">
     <meta name="keywords" content="web developer, QA engineer, MERN, selenium, freelance, portfolio">
     <link rel="icon" href="favicon.ico">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <style> body { font-family: 'Inter', sans-serif; } </style>
     <style>
       html {
       scroll-behavior: smooth;
-    }
-</style>
+      }
+    </style>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Donald Doricent's Portfolio</title>
 </head>
-<body class="min-h-screen flex flex-col bg-gradient-to-b from-indigo-50 via-indigo-100 to-indigo-200">
+
+
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-indigo-50 via-indigo-100 to-indigo-200 font-sans leading-relaxed">
     <header class="fixed top-0 left-0 w-full bg-indigo-100 shadow-lg">
         <div class="container mx-auto px-4 flex items-center justify-between py-6">
             <a href="#" class="text-indigo-600 font-bold text-xl">Donald Doricent</a>
@@ -36,7 +50,7 @@
 
 
     <section class="text-center pt-4 mt-32 mx-auto max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-indigo-600">
             QA Tester + Web Developer
             Breaking Bugs. Building Better Web.
         </h1>
@@ -45,13 +59,37 @@
 
     <hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm"> <!-- Divider between sections-->
 
-    <section id="about" class="pt-40">
-        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600 text-center">
-            About Me
-        </h1>
-        <p class="mt-4 text-base md:text-xl text-gray-700 max-w-xl mx-auto">I’m a self-taught Web developer and QA engineer who blends testing discipline with web development. I’ve written test plans, manual cases, automated flows with Python/Selenium, and build in the MERN stack.</p>
-    </section>
+    <section id="about" class="pt-40 px-4 pb-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-4">
+          About Me
+        </h2>
+        <p class="text-base md:text-xl text-gray-700 leading-relaxed">
+          I’m Donald Doricent—a self-taught Web Developer and QA Engineer who blends rigorous testing discipline with modern web development. I’ve authored test plans, manual and automated test flows using Python & Selenium, and built full-stack apps in the MERN stack. I’m passionate about breaking bugs and crafting seamless user experiences.
+        </p>
+      </div>
+  </section>
     <hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm"> <!-- Divider between sections-->
+
+
+
+<section id="skills" class="py-16 px-4" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-600 text-center mb-8">
+    Skills &amp; Tools
+  </h2>
+
+  <div class="swiper max-w-4xl mx-auto">
+    <div class="swiper-wrapper">
+      <!-- your swiper-slide items here -->
+    </div>
+    <div class="swiper-pagination mt-4"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm">
+
 
     <section id="projects" class="pt-40 w-full px-4">
   <h1 class="text-4xl md:text-6xl font-bold text-indigo-600 text-center mb-12">
@@ -232,7 +270,7 @@
 </section>
 
 
-    
+    <hr class="w-1/2 border-t border-gray-700 my-12 mx-auto blur-sm">
 
     <!-- Copy/Paste this card for each project -->
     
@@ -295,7 +333,39 @@
 
     
 
-    
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    new Swiper(".swiper", {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        320: { slidesPerView: 2 },
+        640: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 }
+      }
+    });
+  });
+</script>
+
+
+
+
+  
 </body>
 <footer class="mt-20 py-6 text-center text-gray-600 text-sm">
   © 2025 Donald Doricent. All rights reserved.

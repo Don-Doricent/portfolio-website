@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta
@@ -51,6 +51,14 @@
   <header class="fixed top-0 left-0 w-full bg-indigo-950 z-50">
     <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-white">Donald Doricent</a>
+      <!-- Hamburger Button -->
+    <button id="nav-toggle" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
       <div class="space-x-6 hidden md:flex">
         <a href="#about" class="hover:text-gray-200">About</a>
         <a href="#skills" class="hover:text-gray-200">Skills</a>
@@ -68,8 +76,8 @@
   <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-white opacity-10 rounded-full filter blur-3xl"></div>
 
   <!-- Hero Content Wrapper (hidden initially) -->
-  <div id="hero-content" class="relative z-10 text-center px-6 opacity-0 transform scale-90 transition duration-1000 ease-out">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+  <div id="hero-content" class="relative z-10 text-center px-6 max-w-2xl mx-auto opacity-0 transform scale-90 transition duration-1000 ease-out">
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4">
       QA Engineer / Web Developer
     </h1>
     <p class="text-base md:text-xl mb-8 max-w-2xl mx-auto">
@@ -178,7 +186,7 @@
 
 
         <!-- Project 1 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="/assets/billHarris.gif"
             alt="Bill Harris Art Demo"
@@ -212,7 +220,7 @@
 
         
         <!-- Project 2 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="/assets/cookieClicker.gif"
             alt="Cookie Clicker Bot Demo"
@@ -242,7 +250,7 @@
       <h2 class="text-3xl md:text-4xl font-extrabold">Side Projects</h2>
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
         <!-- Media Project -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="assets/mediaProject.gif"
             alt="Media App Demo"
@@ -270,7 +278,7 @@
           </div>
         </div>
         <!-- PokéDex App -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="assets/pokedex.gif"
             alt="PokéDex App Demo"
@@ -298,7 +306,7 @@
           </div>
         </div>
         <!-- Google Search Bot -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="assets/googleBot.gif"
             alt="Google Search Bot Demo"
@@ -319,7 +327,7 @@
           </div>
         </div>
         <!-- JARVIS AI -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
           <img
             src="assets/jarvisAI.gif"
             alt="JARVIS AI Demo"
@@ -454,6 +462,15 @@
     document.getElementById('hero-content').classList.add('opacity-100', 'scale-100');
   }, 500); // Adjust the delay (500ms) as needed
 });
+
+// Mobile Nav Toggle
+const toggle = document.getElementById("nav-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
 
   </script>
 </body>

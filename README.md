@@ -1,4 +1,4 @@
-# QA-Tested Developer Portfolio 🚀
+# QA-Tested Developer Portfolio 🚀 
 
 > A personal one-pager built from scratch, with QA practices integrated from the start.  
 > Showcasing my projects, background, and a growing QA toolkit—because functionality should evolve alongside design.

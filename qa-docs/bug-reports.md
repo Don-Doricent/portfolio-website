@@ -30,4 +30,4 @@
 - **Expected**: Opens in a new tab
 - **Actual**: Replaces current tab
 - **Fix**: Add `target="_blank"` to `<a>` tag
-- **Status**: To be fixed
+- **Status**: To be fixed 

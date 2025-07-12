@@ -411,7 +411,6 @@
 
   <!-- ==================== CONTACT ==================== -->
 <section id="contact" class="py-20 px-4" data-aos="fade-up">
-  <!-- CTA line -->
   <div class="max-w-3xl mx-auto text-center space-y-4">
     <h2 class="text-3xl md:text-4xl font-extrabold text-white">Contact Me</h2>
     <p class="text-lg text-indigo-200">
@@ -419,22 +418,21 @@
     </p>
   </div>
 
-  <!-- white card form -->
   <div class="max-w-lg mx-auto mt-8 bg-white rounded-2xl shadow-md p-6">
-    <form name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          class="flex flex-col gap-4">
+    <form
+      action="https://formspree.io/f/xrblzgze"
+      method="POST"
+      class="flex flex-col gap-4"
+    >
+      <!-- honeypot to block spam bots -->
+      <input type="text" name="_gotcha" style="display:none" />
 
-      <!-- honeypot -->
-      <div hidden>
-        <input name="bot-field">
-      </div>
-      <input type="hidden" name="form-name" value="contact">
-      <input type="hidden" name="_redirect" value="/thank-you.html">
+      <!-- optional: custom email subject -->
+      <input type="hidden" name="_subject" value="New message from portfolio" />
 
-      <!-- inputs -->
+      <!-- optional: redirect after submit -->
+      <input type="hidden" name="_next" value="/thank-you.html" />
+
       <input
         name="name"
         type="text"
@@ -459,7 +457,6 @@
         class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
       ></textarea>
 
-      <!-- submit button -->
       <button
         type="submit"
         class="mt-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition"
@@ -469,6 +466,7 @@
     </form>
   </div>
 </section>
+
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="bg-indigo-900 py-8 px-4">

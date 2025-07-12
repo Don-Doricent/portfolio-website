@@ -190,11 +190,11 @@
   <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Experience</h2>
 
   <!-- timeline wrapper -->
-  <div class="relative max-w-3xl mx-auto border-l-2 border-indigo-500/30 pl-8">
+  <div class="relative max-w-3xl mx-auto border-l-2 border-indigo-500/30 pl-12">
 
     <!-- dot + role -->
     <div class="relative mb-12">
-      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <span class="absolute -left-6 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
       <h3 class="text-lg font-semibold text-indigo-200">
         Freelance Web&nbsp;Developer & QA&nbsp;Engineer
       </h3>
@@ -207,7 +207,7 @@
     </div>
 
     <div class="relative mb-12">
-      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <span class="absolute -left-6 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
       <h3 class="text-lg font-semibold text-indigo-200">
         Enterprise SDR — Augury
       </h3>
@@ -220,7 +220,7 @@
     </div>
 
     <div class="relative">
-      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <span class="absolute -left-6 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
       <h3 class="text-lg font-semibold text-indigo-200">
         Sales Dev Rep — Inside Sales Solutions
       </h3>
@@ -249,14 +249,13 @@
           <img
             src="/assets/billHarris.gif"
             alt="Bill Harris Art Demo"
-            class="w-full h-48 object-cover"
-          />
+            class="w-full h-48 object-cover"/>
           <div class="p-6 text-gray-800 space-y-4">
             <h3 class="text-xl font-semibold text-indigo-700 mb-2">Bill Harris Art</h3>
             <p class="text-gray-600 mb-4">
               A modern artist portfolio website built for Bill Harris showcasing abstract and landscape paintings.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex justify-center space-x-4">
               <!-- Live Demo button (replace href="#" with your actual URL) -->
               <a
                 href="https://billharrisart.com/"
@@ -411,47 +410,67 @@
   </section>
 
   <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="py-20 px-4" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto text-center space-y-6">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Contact Me</h2>
-      <form
-        action="https://formsubmit.co/DDoricent97@gmail.com"
-        method="POST"
-        class="flex flex-col space-y-6"
+<section id="contact" class="py-20 px-4" data-aos="fade-up">
+  <!-- CTA line -->
+  <div class="max-w-3xl mx-auto text-center space-y-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Contact Me</h2>
+    <p class="text-lg text-indigo-200">
+      Have a project in mind, need a website, or want to collaborate? Let’s chat!
+    </p>
+  </div>
+
+  <!-- white card form -->
+  <div class="max-w-lg mx-auto mt-8 bg-white rounded-2xl shadow-md p-6">
+    <form name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="flex flex-col gap-4">
+
+      <!-- honeypot -->
+      <div hidden>
+        <input name="bot-field">
+      </div>
+      <input type="hidden" name="form-name" value="contact">
+
+      <!-- inputs -->
+      <input
+        name="name"
+        type="text"
+        placeholder="Your Name"
+        required
+        class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Your Email"
+        required
+        class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      ></textarea>
+
+      <!-- submit button -->
+      <button
+        type="submit"
+        class="mt-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition"
       >
-        <input type="hidden" name="_captcha" value="false" />
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          class="px-4 py-3 rounded bg-white text-gray-800 focus:ring-indigo-500 focus:outline-none"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          class="px-4 py-3 rounded bg-white text-gray-800 focus:ring-indigo-500 focus:outline-none"
-        />
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-          class="px-4 py-3 rounded bg-white text-gray-800 focus:ring-indigo-500 focus:outline-none"
-        ></textarea>
 
-        <button
-          type="submit"
-          class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded hover:bg-indigo-700 transition"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
+
 
   <!-- ==================== SWIPER & AOS Init & OFFSET-SCROLL JS ==================== -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

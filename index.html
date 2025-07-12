@@ -50,12 +50,13 @@
 </head>
 
 <body
-  class="min-h-screen flex flex-col bg-gradient-to-br from-indigo-900 via-violet-800 to-indigo-900 text-white">
+  class="min-h-screen flex flex-col bg-gradient-to-br from-indigo-900 via-violet-800 to-indigo-900 text-white overflow-x-hidden">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 w-full bg-indigo-900/80 backdrop-blur z-50">
+  <header class="fixed top-0 left-0 w-full bg-indigo-800/60 backdrop-blur-lg shadow-md z-50"> <!-- Fix the color on this -->
     <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-white">Donald Doricent</a>
+
       <!-- Hamburger Button -->
     <button id="nav-toggle" class="md:hidden text-white focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
@@ -74,19 +75,19 @@
   </header>
 
   <!-- ==================== HERO ==================== -->
-  <section class="relative flex items-center justify-center h-screen overflow-visible">
+  <section class="relative flex items-center justify-center min-h-[80vh] pt-32 pb-20 overflow-visible">
   
   <!-- Blurred Circles -->
-  <div class="absolute -top-20 -left-20 w-72 h-72 bg-white opacity-10 rounded-full filter blur-3xl"></div>
-  <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-white opacity-10 rounded-full filter blur-3xl"></div>
+  <div class="absolute -top-28 -left-28 w-96 h-96 bg-white opacity-10 rounded-full filter blur-3xl"></div>
+  <div class="absolute bottom-0 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <!-- Hero Content Wrapper (hidden initially) -->
   <div id="hero-content" class="relative z-10 text-center px-6 max-w-2xl mx-auto opacity-0 transform scale-90 transition duration-1000 ease-out">
-    <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4">
-      QA Engineer / Web Developer
+    <h1 class="text-4xl sm:text-4xl md:text-6xl font-extrabold mb-4">
+      Full-Stack Developer / QA Engineer
     </h1>
     <p class="text-base md:text-xl mb-8 max-w-2xl mx-auto">
-      Building responsive sites with HTML, CSS, JavaScript & Tailwind—and writing Python/Selenium tests to keep them rock-solid.
+      I build web apps&nbsp;—&nbsp;then test them front to back to be sure they work.
     </p>
     <a
       href="#about"
@@ -104,7 +105,7 @@
     <div class="max-w-3xl mx-auto text-center space-y-6">
       <h2 class="text-3xl md:text-4xl font-extrabold">About Me</h2>
       <p class="text-base md:text-xl leading-relaxed text-gray-100">
-          I’m Don, a self‐taught Web Developer and QA Engineer who builds responsive sites with HTML, CSS, JavaScript, and Tailwind, then crafts Python/Selenium test suites to ensure they run flawlessly.
+          Self-taught JavaScript developer working in the MERN stack and a lifelong tech tinkerer. When I'm not coding features I'm writing tests to break them on purpose. AI enthusiast.
       </p>
     </div>
   </section>
@@ -182,6 +183,59 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ==================== EXPERIENCE ==================== -->
+<section id="experience" class="py-20 px-4" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Experience</h2>
+
+  <!-- timeline wrapper -->
+  <div class="relative max-w-3xl mx-auto border-l-2 border-indigo-500/30 pl-8">
+
+    <!-- dot + role -->
+    <div class="relative mb-12">
+      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <h3 class="text-lg font-semibold text-indigo-200">
+        Freelance Web&nbsp;Developer & QA&nbsp;Engineer
+      </h3>
+      <p class="text-sm text-gray-400 mb-1">Jun 2023 – Present · Remote</p>
+      <p class="text-gray-300">
+        Build small React/Tailwind sites and add Playwright or Selenium smoke
+        tests so they stay solid. Latest suite runs four checks in ≈4 s on
+        GitHub Actions.
+      </p>
+    </div>
+
+    <div class="relative mb-12">
+      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <h3 class="text-lg font-semibold text-indigo-200">
+        Enterprise SDR — Augury
+      </h3>
+      <p class="text-sm text-gray-400 mb-1">Dec 2024 – Apr 2025 · Remote</p>
+      <p class="text-gray-300">
+        Helped onboard sensors-as-a-service customers and surfaced eight edge-case
+        issues to the product team. Those fixes bumped trial-to-paid conversions
+        by about 18 %.
+      </p>
+    </div>
+
+    <div class="relative">
+      <span class="absolute -left-3 top-1 w-4 h-4 bg-indigo-500 rounded-full"></span>
+      <h3 class="text-lg font-semibold text-indigo-200">
+        Sales Dev Rep — Inside Sales Solutions
+      </h3>
+      <p class="text-sm text-gray-400 mb-1">Oct 2023 – Dec 2024 · Remote</p>
+      <p class="text-gray-300">
+        Audited the CRM, cut duplicate leads by a quarter, and A/B-tested
+        outreach scripts that pushed qualified meetings to ~12 each month.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
 
   <!-- ==================== PROJECTS ==================== -->
   <section id="projects" class="py-20 px-4" data-aos="fade-up">

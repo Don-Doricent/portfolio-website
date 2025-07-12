@@ -6,6 +6,9 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <title>Donald Doricent’s Portfolio</title>
   <link rel="icon" href="favicon.ico" />
 
@@ -47,11 +50,10 @@
 </head>
 
 <body
-  class="min-h-screen flex flex-col bg-gradient-to-b from-indigo-950 to-indigo-900
-         font-sans leading-relaxed text-white"
->
+  class="min-h-screen flex flex-col bg-gradient-to-br from-indigo-900 via-violet-800 to-indigo-900 text-white">
+
   <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 w-full bg-indigo-950 z-50">
+  <header class="fixed top-0 left-0 w-full bg-indigo-900/80 backdrop-blur z-50">
     <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-white">Donald Doricent</a>
       <!-- Hamburger Button -->
@@ -72,7 +74,7 @@
   </header>
 
   <!-- ==================== HERO ==================== -->
-  <section class="relative flex items-center justify-center h-screen overflow-hidden">
+  <section class="relative flex items-center justify-center h-screen overflow-visible">
   
   <!-- Blurred Circles -->
   <div class="absolute -top-20 -left-20 w-72 h-72 bg-white opacity-10 rounded-full filter blur-3xl"></div>
@@ -189,7 +191,7 @@
 
 
         <!-- Project 1 -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="/assets/billHarris.gif"
             alt="Bill Harris Art Demo"
@@ -223,7 +225,7 @@
 
         
         <!-- Project 2 -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="/assets/cookieClicker.gif"
             alt="Cookie Clicker Bot Demo"
@@ -253,7 +255,7 @@
       <h2 class="text-3xl md:text-4xl font-extrabold">Side Projects</h2>
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
         <!-- Media Project -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="assets/mediaProject.gif"
             alt="Media App Demo"
@@ -281,7 +283,7 @@
           </div>
         </div>
         <!-- PokéDex App -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="assets/pokedex.gif"
             alt="PokéDex App Demo"
@@ -309,7 +311,7 @@
           </div>
         </div>
         <!-- Google Search Bot -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="assets/googleBot.gif"
             alt="Google Search Bot Demo"
@@ -330,7 +332,7 @@
           </div>
         </div>
         <!-- JARVIS AI -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition">
+        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
           <img
             src="assets/jarvisAI.gif"
             alt="JARVIS AI Demo"

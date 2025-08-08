@@ -1,31 +1,29 @@
 module.exports = {
   plugins: [
     {
-      name: 'preset-default'
+      name: 'preset-default',
     },
     {
       name: 'removeDimensions',
       params: {
         overrides: {
           removeDimensions: true,
-        }
-      }
+        },
+      },
     },
     {
       name: 'removeScriptElement',
       params: {
         overrides: {
           removeScriptElement: true,
-        }
-      }
+        },
+      },
     },
     {
-      name: "removeAttrs",
+      name: 'removeAttrs',
       params: {
-        attrs: [
-          'path:fill:none'
-        ]
-      }
-    }
-  ]
+        attrs: ['path:fill:none'],
+      },
+    },
+  ],
 };

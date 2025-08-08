@@ -1,18 +1,18 @@
-const gulp = require("gulp");
-const svgmin = require("gulp-svgmin");
-const sass = require("gulp-sass")(require("sass"));
-const footer = require("gulp-footer");
-const yargs = require("yargs");
-const fsPromise = require("fs").promises;
-const path = require("path");
-const {execSync} = require("child_process")
+const gulp = require('gulp');
+const svgmin = require('gulp-svgmin');
+const sass = require('gulp-sass')(require('sass'));
+const footer = require('gulp-footer');
+const yargs = require('yargs');
+const fsPromise = require('fs').promises;
+const path = require('path');
+const { execSync } = require('child_process');
 
 // global const
-const deviconBaseCSSName = "devicon-base.css"
-const deviconJSONName = "devicon.json";
-const aliasSCSSName = "devicon-alias.scss";
-const colorsCSSName = "devicon-colors.css";
-const finalMinSCSSName = "devicon.min.scss";
+const deviconBaseCSSName = 'devicon-base.css';
+const deviconJSONName = 'devicon.json';
+const aliasSCSSName = 'devicon-alias.scss';
+const colorsCSSName = 'devicon-colors.css';
+const finalMinSCSSName = 'devicon.min.scss';
 
 //////// CSS Tasks ////////
 
@@ -27,12 +27,12 @@ async function createDeviconMinCSS() {
   // recall that devicon-alias.scss imported the devicon-base.css => don't need
   // to reimport that file.
   const fileContent = `@use "${aliasSCSSName}";@use "${colorsCSSName}";`;
-  await fsPromise.writeFile(deviconMinPath, fileContent, "utf8");
+  await fsPromise.writeFile(deviconMinPath, fileContent, 'utf8');
 
   return gulp
     .src(finalMinSCSSName)
-    .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(gulp.dest("./"));
+    .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./'));
 }
 
 /**
@@ -41,13 +41,10 @@ async function createDeviconMinCSS() {
  */
 async function createCSSFiles() {
   const deviconJson = JSON.parse(
-    await fsPromise.readFile(path.join(__dirname, deviconJSONName), "utf8")
+    await fsPromise.readFile(path.join(__dirname, deviconJSONName), 'utf8'),
   );
 
-  await Promise.all([
-    createAliasSCSS(deviconJson),
-    createColorsCSS(deviconJson)
-  ]);
+  await Promise.all([createAliasSCSS(deviconJson), createColorsCSS(deviconJson)]);
 }
 
 /**
@@ -61,10 +58,10 @@ async function createCSSFiles() {
  * created.
  */
 function createAliasSCSS(deviconJson) {
-  let statements = deviconJson.map(createAliasStatement).join(" ");
+  let statements = deviconJson.map(createAliasStatement).join(' ');
   let sass = `@use "${deviconBaseCSSName}";${statements}`;
   let sassPath = path.join(__dirname, aliasSCSSName);
-  return fsPromise.writeFile(sassPath, sass, "utf8");
+  return fsPromise.writeFile(sassPath, sass, 'utf8');
 }
 
 /**
@@ -79,12 +76,12 @@ function createAliasStatement(fontObj) {
   let { name, aliases } = fontObj;
 
   return aliases
-    .map(aliasObj => {
+    .map((aliasObj) => {
       return `.devicon-${name}-${aliasObj.alias} {
             @extend .devicon-${name}-${aliasObj.base} !optional;
         }`;
     })
-    .join(" ");
+    .join(' ');
 }
 
 /**
@@ -97,33 +94,33 @@ function createAliasStatement(fontObj) {
 function createColorsCSS(deviconJson) {
   // create the color statements for each font object
   let statements = deviconJson
-    .map(fontObj => {
+    .map((fontObj) => {
       let {
         name,
         versions: { font: fonts },
         color,
-        aliases
+        aliases,
       } = fontObj;
 
-      if (fonts.length === 0 || typeof color !== "string") {
+      if (fonts.length === 0 || typeof color !== 'string') {
         console.log(`This object doesn't have a font or a color: ${name}`);
-        return "";
+        return '';
       }
 
       // process the icons in the font attr
       let cssClasses = fonts.map((font) => `.devicon-${name}-${font}.colored`);
 
       // process the icons in the aliases attr
-      aliases.forEach(aliasObj => {
-        cssClasses.push(`.devicon-${name}-${aliasObj["alias"]}.colored`);
+      aliases.forEach((aliasObj) => {
+        cssClasses.push(`.devicon-${name}-${aliasObj['alias']}.colored`);
       });
 
-      return `${cssClasses.join(",")}{color: ${color}}`;
+      return `${cssClasses.join(',')}{color: ${color}}`;
     })
-    .join(" ");
+    .join(' ');
 
   let cssPath = path.join(__dirname, colorsCSSName);
-  return fsPromise.writeFile(cssPath, statements, "utf8");
+  return fsPromise.writeFile(cssPath, statements, 'utf8');
 }
 
 /**
@@ -134,14 +131,14 @@ function cleanUp() {
   let fileNames = [aliasSCSSName, colorsCSSName, finalMinSCSSName];
 
   return Promise.all(
-    fileNames.map(name => {
+    fileNames.map((name) => {
       try {
         let filePath = path.join(__dirname, name);
         return fsPromise.unlink(filePath);
       } catch (e) {
         console.log(e);
       }
-    })
+    }),
   );
 }
 
@@ -158,11 +155,11 @@ function optimizeSvg() {
   return gulp
     .src(svgGlob)
     .pipe(svgmin(configOptionCallback))
-    .pipe(footer("\n"))
+    .pipe(footer('\n'))
     .pipe(
-      gulp.dest(file => {
+      gulp.dest((file) => {
         return file.base;
-      })
+      }),
     );
 }
 
@@ -178,41 +175,41 @@ function configOptionCallback(file) {
       {
         prefixIds: {
           prefix: file.stem, // add file name to ids
-          delim: "-"
+          delim: '-',
         },
       },
       {
-        removeViewBox: false // keep viewbox
+        removeViewBox: false, // keep viewbox
       },
       {
-        removeDimensions: true // remove height and width
+        removeDimensions: true, // remove height and width
       },
       {
-        name: "removeAttrs",
+        name: 'removeAttrs',
         params: {
-          attrs: "svg:(x|y)"
-        }
-      }
-    ]
+          attrs: 'svg:(x|y)',
+        },
+      },
+    ],
   };
 }
 
 /**
- * Bump the NPM version of this project. 
- * This is called via the command line 
+ * Bump the NPM version of this project.
+ * This is called via the command line
  * using the format "npm run bump -- -v='MAJOR.MINOR.PATCH'"
  * @returns a Promise.resolve()
  */
 function bumpVersion() {
-  let newVersion = yargs.argv.v
-  let command = `npm version v${newVersion} -m "bump npm version to v${newVersion}"`
-  console.log("Running command: " + command)
-  let stdout = execSync(command)
-  console.log("Command ran. Here's the result:\n" + stdout)
-  return Promise.resolve()
+  let newVersion = yargs.argv.v;
+  let command = `npm version v${newVersion} -m "bump npm version to v${newVersion}"`;
+  console.log('Running command: ' + command);
+  let stdout = execSync(command);
+  console.log("Command ran. Here's the result:\n" + stdout);
+  return Promise.resolve();
 }
 
 exports.updateCss = createDeviconMinCSS;
 exports.clean = cleanUp;
 exports.optimizeSvg = optimizeSvg;
-exports.bumpVersion = bumpVersion
+exports.bumpVersion = bumpVersion;

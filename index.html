@@ -79,31 +79,31 @@
     </nav>
   </header>
 
-  <!-- ==================== HERO ==================== -->
-  <section class="relative flex items-center justify-center min-h-[80vh] pt-32 pb-20 overflow-visible">
-  
-  <!-- Blurred Circles -->
-  <div class="absolute -top-28 -left-28 w-96 h-96 bg-white opacity-10 rounded-full filter blur-3xl"></div>
-  <div class="absolute bottom-0 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- ==================== HERO  ==================== -->
 
-  <!-- Hero Content Wrapper (hidden initially) -->
-  <div id="hero-content" class="relative z-10 text-center px-6 max-w-2xl mx-auto opacity-0 transform scale-90 transition duration-1000 ease-out">
-    <h1 class="text-4xl sm:text-4xl md:text-6xl font-extrabold mb-4">
-      Full-Stack Developer / QA Engineer
-    </h1>
-    <p class="text-base md:text-xl mb-8 max-w-2xl mx-auto">
-      I build web apps&nbsp;—&nbsp;then test them front to back to be sure they work.
-    </p>
-    <a
-      href="#about"
-      class="inline-block bg-white text-indigo-700 font-semibold
-             px-6 py-3 rounded-full shadow-lg hover:shadow-2xl transition"
-    >
-      View About ↓
-    </a>
-  </div>
+  <section class="relative flex items-center justify-center min-h-[80vh] pt-32 pb-20">
+    
+    <div class="pointer-events-none absolute -top-24 -left-24 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
 
-</section>
+    <div id="hero-content" class="relative z-10 text-center px-6 max-w-3xl mx-auto opacity-0 transform scale-90 transition duration-1000 ease-out">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+        Full-Stack Developer <span class="text-indigo-300">/</span> QA Engineer
+      </h1>
+      <p class="text-base md:text-xl mb-8 text-indigo-100/90">
+        I build responsive, modern web apps  and ensure they’re bulletproof with automated testing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#web-projects" class="inline-block bg-white text-indigo-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-2xl transition">
+          View Web Projects
+        </a>
+        <a href="#qa-projects" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition">
+          QA & Testing Work
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==================== ABOUT ==================== -->
   <section id="about" class="py-20 px-4" data-aos="fade-up">
@@ -124,70 +124,91 @@
       </h2>
       <!-- Swiper Carousel Container -->
       <div class="swiper">
-        <div class="swiper-wrapper">
-          <!-- HTML5 -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-html5-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">HTML5</span>
-          </div>
-          <!-- CSS3 -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-css3-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">CSS3</span>
-          </div>
-          <!-- JavaScript -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-javascript-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">JavaScript</span>
-          </div>
-          <!-- Python -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-python-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Python</span>
-          </div>
-          <!-- Tailwind CSS -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-tailwindcss-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Tailwind CSS</span>
-          </div>
-          <!-- Flask -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-flask-original text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Flask</span>
-          </div>
-          <!-- Selenium -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-selenium-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Selenium</span>
-          </div>
-          <!-- Node.js -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-nodejs-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Node.js</span>
-          </div>
-          <!-- MongoDB -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-mongodb-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">MongoDB</span>
-          </div>
-          <!-- Git & GitHub -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-git-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Git & GitHub</span>
-          </div>
-          <!-- ChromeDriver -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-chrome-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">ChromeDriver</span>
-          </div>
-          <!-- Netlify -->
-          <div class="swiper-slide flex flex-col items-center">
-            <i class="devicon-netlify-plain colored text-6xl"></i>
-            <span class="mt-2 text-sm font-medium text-gray-100">Netlify</span>
-          </div>
-        </div>
-      </div>
+  <div class="swiper-wrapper">
+    <!-- Dev stack -->
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-html5-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">HTML5</span>
     </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-css3-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">CSS3</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-javascript-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">JavaScript</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-react-original colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">React</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-nodejs-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Node.js</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-mongodb-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">MongoDB</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-tailwindcss-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Tailwind</span>
+    </div>
+
+    <!-- Languages / frameworks you had -->
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-python-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Python</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-flask-original text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Flask</span>
+    </div>
+
+    <!-- QA / Testing -->
+    <div class="swiper-slide flex items-center justify-center">
+      <span class="px-3 py-2 rounded-full border border-white/25 text-sm font-medium text-indigo-100">
+        Cypress
+      </span>
+    </div>
+    <div class="swiper-slide flex items-center justify-center">
+      <span class="px-3 py-2 rounded-full border border-white/25 text-sm font-medium text-indigo-100">
+        Playwright
+      </span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-selenium-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Selenium</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-jest-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Jest</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-postman-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Postman</span>
+    </div>
+
+    <!-- Tools / hosting -->
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-git-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Git & GitHub</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-githubactions-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">GitHub Actions</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-chrome-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">ChromeDriver</span>
+    </div>
+    <div class="swiper-slide flex flex-col items-center">
+      <i class="devicon-netlify-plain colored text-6xl"></i>
+      <span class="mt-2 text-sm font-medium text-gray-100">Netlify</span>
+    </div>
+  </div>
+</div>
+
   </section>
 
   
@@ -245,177 +266,145 @@
 
 
 
-  <!-- ==================== PROJECTS ==================== -->
-  <section id="projects" class="py-20 px-4" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Main Projects</h2>
-      <div class="grid gap-8 md:grid-cols-2">
+  <!-- ==================== WEB PROJECTS ==================== -->
+<section id="web-projects" class="py-20 px-4" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto text-center space-y-8">
+    <h2 class="text-3xl md:text-4xl font-extrabold">Web Development Projects</h2>
 
+    <div class="grid gap-8 md:grid-cols-2">
 
-        <!-- Project 1 -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="/assets/billHarris.gif"
-            alt="Bill Harris Art Demo"
-            class="w-full h-48 object-cover"/>
-          <div class="p-6 text-gray-800 space-y-4">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Bill Harris Art</h3>
-            <p class="text-gray-600 mb-4">
-              A modern artist portfolio website built for Bill Harris showcasing abstract and landscape paintings.
-            </p>
-            <div class="flex justify-center space-x-4">
-              <!-- Live Demo button (replace href="#" with your actual URL) -->
-              <a
-                href="https://billharrisart.com/"
-                target="_blank"
-                class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-              >
-                Live Demo
-              </a>
-              <!-- GitHub button (replace href="#" with your repo link) -->
-              <a
-              href="https://github.com/Don-Doricent/Bill-Harris-Website"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
-            </div>
+      <!-- Bill Harris Art -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/billHarris.gif" alt="Bill Harris Art Demo" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Bill Harris Art</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>Client portfolio with clean gallery UX</li>
+            <li>Responsive layout and image optimization</li>
+            <li>Simple content updates without breaking design</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://billharrisart.com/" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">Live</a>
+            <a href="https://github.com/Don-Doricent/Bill-Harris-Website" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
           </div>
         </div>
+      </article>
 
-        
-        <!-- Project 2 -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="/assets/cookieClicker.gif"
-            alt="Cookie Clicker Bot Demo"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Cookie Clicker Bot</h3>
-            <p class="text-gray-600 mb-4">
-              A Python + Selenium bot that automates a web game (Cookie Clicker), including functional automation tests.
-            </p>
-            <a
-              href="https://github.com/Don-Doricent/selenium-automations/tree/main/projects/cookie-clicker-bot"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
+      <!-- Media 100 Hours -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/mediaProject.gif" alt="Media 100 Hours Demo" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Media</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>Mood-based recommendations for movies, podcasts, books</li>
+            <li>Stateful UI with clean card layout</li>
+            <li>Roadmap: user prefs + list export</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://justformedia.netlify.app/" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">Live</a>
+            <a href="https://github.com/Don-Doricent/media" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
           </div>
         </div>
-      </div>
+      </article>
+
+      <!-- PokéDex App -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/pokedex.gif" alt="PokéDex App Demo" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">PokéDex App</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>PokéAPI integration for stats, types, and images</li>
+            <li>Search + detail views with responsive layout</li>
+            <li>Vanilla HTML/CSS/JS</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://generationalpokedex.netlify.app/" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">Live</a>
+            <a href="https://github.com/Don-Doricent/pokemon-api" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- JARVIS AI -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/jarvisAI.gif" alt="JARVIS AI Demo" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">JARVIS AI</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>Local voice assistant (Python + offline LLM)</li>
+            <li>Speech recognition + TTS + simple commands</li>
+            <li>CLI-first workflow</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://github.com/Don-Doricent/jarvis-ai" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
+          </div>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ==================== MORE PROJECTS ==================== -->
-  <section id="more-projects" class="py-20 px-4" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto text-center space-y-8">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Side Projects</h2>
-      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
-        <!-- Media Project -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="assets/mediaProject.gif"
-            alt="Media App Demo"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Media 100 Hours</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              A smart media app recommending movies, podcasts, and books based on your mood. Currently in development.
-            </p>
-              <a
-                href="https://justformedia.netlify.app/"
-                target="_blank"
-                class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-              >
-                Live Demo
-              </a>
-            <a
-              href="https://github.com/Don-Doricent/media"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
+<!-- ==================== QA & AUTOMATION PROJECTS ==================== -->
+<section id="qa-projects" class="py-20 px-4" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto text-center space-y-8">
+    <h2 class="text-3xl md:text-4xl font-extrabold">QA & Automation Projects</h2>
+
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <!-- Cypress E2E — Portfolio -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/cypressPortfolio.gif" alt="Cypress E2E run for portfolio" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Cypress E2E — Portfolio</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>JS + Cypress + Chai assertions</li>
+            <li>Verifies hero copy, nav, and responsive layout</li>
+            <li>Desktop & tablet viewports</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://github.com/Don-Doricent/cypress-e2e-demo" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
+            <a href="https://dondoricent.netlify.app" class="inline-block bg-indigo-100 text-indigo-700 font-semibold px-4 py-2 rounded hover:bg-indigo-200 transition">Tested Site</a>
           </div>
         </div>
-        <!-- PokéDex App -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="assets/pokedex.gif"
-            alt="PokéDex App Demo"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">PokéDex App</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              A web app using the PokéAPI to display real-time Pokémon data (stats, types, images). Built with HTML, CSS, and JavaScript.
-            </p>
-            <a
-                href="https://generationalpokedex.netlify.app/"
-                target="_blank"
-                class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-              >
-                Live Demo
-              </a>
-            <a
-              href="https://github.com/Don-Doricent/pokemon-api"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
+      </article>
+
+      <!-- Cookie Clicker Bot -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/cookieClicker.gif" alt="Cookie Clicker automation" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Cookie Clicker Bot (Selenium)</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>Python + Selenium + ChromeDriver</li>
+            <li>Automates clicks, validates upgrade logic</li>
+            <li>Basic timing & assertion checks</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://github.com/Don-Doricent/selenium-automations/tree/main/projects/cookie-clicker-bot" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
           </div>
         </div>
-        <!-- Google Search Bot -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="assets/googleBot.gif"
-            alt="Google Search Bot Demo"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Selenium Google Search App</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              A Python + Selenium script that performs Google searches, captures top results, and measures load times.
-            </p>
-            <a
-              href="https://github.com/Don-Doricent/selenium-automations/tree/main/projects/google-search-bot"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
+      </article>
+
+      <!-- Google Search Automation -->
+      <article class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <img src="/assets/googleBot.gif" alt="Google search automation" class="w-full h-48 object-cover" />
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Google Search Automation</h3>
+          <ul class="list-none pl-0 text-gray-600 text-sm space-y-2 mb-4">
+            <li>Python + Selenium</li>
+            <li>Runs queries, captures top results</li>
+            <li>Measures load times for pages</li>
+          </ul>
+          <div class="flex justify-center gap-4">
+            <a href="https://github.com/Don-Doricent/selenium-automations/tree/main/projects/google-search-bot" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">GitHub</a>
           </div>
         </div>
-        <!-- JARVIS AI -->
-        <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-          <img
-            src="assets/jarvisAI.gif"
-            alt="JARVIS AI Demo"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">JARVIS AI</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              A local voice-controlled AI assistant built with Python and Ollama (offline). Speech recognition, text-to-speech, and basic system control.
-            </p>
-            <a
-              href="https://github.com/Don-Doricent/jarvis-ai"
-              target="_blank"
-              class="inline-block bg-indigo-600 text-white font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- ==================== CONTACT ==================== -->
 <section id="contact" class="py-20 px-4" data-aos="fade-up">

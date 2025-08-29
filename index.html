@@ -140,12 +140,17 @@
           <div class="swiper-slide flex flex-col items-center">
             <i class="devicon-flask-original text-6xl"></i><span class="mt-2 text-sm font-medium text-gray-100">Flask</span>
           </div>
-          <!-- QA / Testing -->
-          <div class="swiper-slide flex items-center justify-center">
-            <span class="px-3 py-2 rounded-full border border-white/25 text-sm font-medium text-indigo-100">Cypress</span>
+          <!-- Cypress -->
+          <div class="swiper-slide flex flex-col items-center">
+            <img src="https://raw.githubusercontent.com/cypress-io/cypress/develop/assets/cypress-logo-dark.png" 
+                alt="Cypress Logo" class="h-12 w-auto" />
+            <span class="mt-2 text-sm font-medium text-gray-100">Cypress</span>
           </div>
-          <div class="swiper-slide flex items-center justify-center">
-            <span class="px-3 py-2 rounded-full border border-white/25 text-sm font-medium text-indigo-100">Playwright</span>
+          <!-- Playwright -->
+          <div class="swiper-slide flex flex-col items-center">
+            <img src="https://playwright.dev/img/playwright-logo.svg" 
+                alt="Playwright Logo" class="h-12 w-auto" />
+            <span class="mt-2 text-sm font-medium text-gray-100">Playwright</span>
           </div>
           <div class="swiper-slide flex flex-col items-center">
             <i class="devicon-selenium-plain colored text-6xl"></i><span class="mt-2 text-sm font-medium text-gray-100">Selenium</span>
@@ -345,6 +350,7 @@
       <p class="text-indigo-100/90 mt-2">Additional builds and experiments showcasing range.</p>
     </header>
 
+    <!-- Visible set -->
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <!-- Media -->
       <article class="w-full bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
@@ -357,6 +363,20 @@
           <div class="flex gap-3">
             <a href="https://justformedia.netlify.app/" target="_blank" class="px-4 py-2 rounded bg-indigo-600 text-white text-sm hover:bg-indigo-700">Live</a>
             <a href="https://github.com/Don-Doricent/media" target="_blank" class="px-4 py-2 rounded border text-sm hover:bg-gray-50">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Spectral Barbershop -->
+      <article class="w-full bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+        <a href="https://spectbarbershop.netlify.app/" target="_blank" rel="noopener" class="block aspect-video overflow-hidden">
+          <img src="/assets/spectral.gif" alt="Spectral Barbershop website" class="w-full h-full object-cover"/>
+        </a>
+        <div class="p-6 text-gray-800">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Spectral Barbershop</h3>
+          <p class="text-gray-600 text-sm mb-4">Local business site with booking-ready sections and clean branding.</p>
+          <div class="flex gap-3">
+            <a href="https://spectbarbershop.netlify.app/" target="_blank" class="px-4 py-2 rounded bg-indigo-600 text-white text-sm hover:bg-indigo-700">Live</a>
           </div>
         </div>
       </article>
@@ -375,7 +395,10 @@
           </div>
         </div>
       </article>
+    </div>
 
+    <!-- Hidden extras -->
+    <div id="more-grid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 hidden mt-8">
       <!-- Redstore Apparel -->
       <article class="w-full bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
         <a href="https://redstoreapparel.netlify.app/" target="_blank" rel="noopener" class="block aspect-video overflow-hidden">
@@ -386,20 +409,6 @@
           <p class="text-gray-600 text-sm mb-4">E-commerce demo store with modern layout and product showcase.</p>
           <div class="flex gap-3">
             <a href="https://redstoreapparel.netlify.app/" target="_blank" class="px-4 py-2 rounded bg-indigo-600 text-white text-sm hover:bg-indigo-700">Live</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Spectral Barbershop -->
-      <article class="w-full bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-        <a href="https://spectbarbershop.netlify.app/" target="_blank" rel="noopener" class="block aspect-video overflow-hidden">
-          <img src="/assets/spectral.gif" alt="Spectral Barbershop website" class="w-full h-full object-cover"/>
-        </a>
-        <div class="p-6 text-gray-800">
-          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Spectral Barbershop</h3>
-          <p class="text-gray-600 text-sm mb-4">Local business site with booking-ready sections and clean branding.</p>
-          <div class="flex gap-3">
-            <a href="https://spectbarbershop.netlify.app/" target="_blank" class="px-4 py-2 rounded bg-indigo-600 text-white text-sm hover:bg-indigo-700">Live</a>
           </div>
         </div>
       </article>
@@ -461,6 +470,15 @@
         </div>
       </article>
     </div>
+
+    <!-- Toggle button -->
+    <div class="text-center mt-6">
+      <button id="more-btn"
+        class="px-4 py-2 rounded bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold"
+        aria-expanded="false" aria-controls="more-grid">
+        Show more projects
+      </button>
+    </div>
   </div>
 </section>
 
@@ -490,35 +508,49 @@
 
 
   <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="py-20 px-4" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto text-center space-y-4">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Contact Me</h2>
-      <p class="text-lg text-indigo-200">Have a project in mind, need a website, or want to collaborate? Let’s chat!</p>
+<section id="contact" class="py-20 px-4" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto text-center space-y-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Contact Me</h2>
+    <p class="text-lg text-indigo-200">Have a project in mind, need a website, or want to collaborate? Let’s chat!</p>
+  </div>
+
+  <!-- success notice -->
+  <div id="contact-alert" class="max-w-lg mx-auto mt-6 hidden">
+    <div class="rounded-xl bg-white/10 backdrop-blur p-4 text-sm">
+      <span class="font-semibold">Thanks!</span> Your message was sent. I’ll reply to your email soon.
     </div>
+  </div>
 
-    <div class="max-w-lg mx-auto mt-8 bg-white rounded-2xl shadow-md p-6">
-      <form
-        action="https://formspree.io/f/xrblzgze"
-        method="POST"
-        class="flex flex-col gap-4"
-      >
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_subject" value="New message from portfolio" />
-        <input type="hidden" name="_next" value="/thank-you.html" />
+  <div class="max-w-lg mx-auto mt-6 bg-white rounded-2xl shadow-md p-6">
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xrblzgze"
+      method="POST"
+      class="flex flex-col gap-4"
+      novalidate>
+      <!-- Honeypot -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <!-- Email subject -->
+      <input type="hidden" name="_subject" value="New message from portfolio" />
 
-        <input name="name" type="text" placeholder="Your Name" required
-               class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
-        <input name="email" type="email" placeholder="Your Email" required
-               class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
-        <textarea name="message" rows="5" placeholder="Your Message" required
-                  class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      <label class="sr-only" for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="Your Name" required
+             class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
 
-        <button type="submit" class="mt-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
+      <label class="sr-only" for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="Your Email" required
+             class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+
+      <label class="sr-only" for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required
+                class="px-4 py-3 rounded bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+      <button type="submit" class="mt-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-indigo-900 border-t border-indigo-800 py-6 px-4">
@@ -578,19 +610,49 @@
       }
     });
 
-    menu.classList.add("transition-all","duration-200","ease-out","opacity-0","-translate-y-2");
-toggle.addEventListener("click", () => {
-  const isHidden = menu.classList.toggle("hidden");
-  if (!isHidden) {
-    requestAnimationFrame(() => {
-      menu.classList.remove("opacity-0","-translate-y-2");
-      menu.classList.add("opacity-100","translate-y-0");
-    });
-  } else {
-    menu.classList.add("opacity-0","-translate-y-2");
-    menu.classList.remove("opacity-100","translate-y-0");
-  }
-});
+    (function () {
+  const btn = document.getElementById('more-btn');
+  const grid = document.getElementById('more-grid');
+  if (!btn || !grid) return;
+
+  btn.addEventListener('click', function () {
+    const expanding = grid.classList.contains('hidden');
+    grid.classList.toggle('hidden');
+    this.textContent = expanding ? 'Show fewer' : 'Show more projects';
+    this.setAttribute('aria-expanded', String(expanding));
+    if (!expanding) this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+
+// Contact form -> Formspree (AJAX) + success notice
+const form = document.getElementById('contact-form');
+const alertBox = document.getElementById('contact-alert');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        if (alertBox) alertBox.classList.remove('hidden');
+      } else {
+        // Fallback: direct mail link if Formspree errors
+        window.location.href = 'mailto:DDoricent97@gmail.com?subject=Portfolio%20Inquiry';
+      }
+    } catch {
+      window.location.href = 'mailto:DDoricent97@gmail.com?subject=Portfolio%20Inquiry';
+    }
+  });
+}
+
+
+
 
   </script>
 </body>

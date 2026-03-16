@@ -1,66 +1,104 @@
-# QA-Tested Developer Portfolio 🚀
+Donald Doricent – Web Developer Portfolio
 
-> A personal one-pager built from scratch, with QA practices integrated from the start.  
-> Showcasing my projects, background, and a growing QA toolkit—because functionality should evolve alongside design.
+This repository contains the source code for my personal portfolio website.
+The site showcases freelance client work, web development projects, and supporting automation work.
 
----
+Live site:
+https://dondoricent.netlify.app/
 
-## 🔍 Features
+About
 
-- ✅ **Responsive Layout**  
-  Built mobile-first with Tailwind CSS utilities.
-- ✅ **Minimal, Readable Design**  
-  Focused on clarity and usability.
-- 🛠 **QA-Driven Workflow (In Progress)**  
-  - Test plan draft covering core user flows  
-  - Manual test cases being written  
-  - Bug report templates ready for documentation  
-  - Selenium automation scripts in early stages  
+This portfolio highlights the projects and skills I am developing as a full-stack JavaScript developer.
 
----
+The site focuses on:
 
-## 🛠 Tech Stack
+freelance client websites
 
-- **HTML & Tailwind CSS** (via CDN)  
-- **JavaScript** (coming soon)  
-- **QA Artifacts** in `qa-docs/` (templates and in-progress scripts)  
+front-end and full-stack development projects
 
----
+UI and responsive design work
 
-## 📂 Site Sections
+testing and automation experiments
 
-1. **Hero** — Introduction & call to action  
-2. **About** — Background, skills, and motivations  
-3. **Projects** — Freelance work & automation demos  
-4. **Contact** — Form with QA hooks for future automation  
+It serves as a central place to present my work while continuing to expand my experience with modern web development tools and frameworks.
 
----
+Tech Stack
+Frontend
 
-## 🔄 QA-First Focus (Ongoing)
+HTML5
 
-This portfolio doubles as my QA sandbox—QA artifacts will be continually updated:
+Tailwind CSS
 
-- **Functional Testing** — Drafting end-to-end user flows  
-- **UI/UX Audits** — Template-based bug tracking  
-- **Regression Scenarios** — Planning to ensure consistency on updates  
-- **Automation Coverage** — Early-stage Selenium scripts  
+JavaScript
 
-_All QA templates and work-in-progress files live in the `qa-docs/` folder._
+Tools
 
----
+Git
 
-## 📡 Live Demo
+GitHub
 
-> Coming soon: [Netlify Deployment URL]()
+Netlify
 
----
+VS Code
 
-## 📬 Let’s Connect
+Testing & Automation
 
-Looking for a developer with QA sensibilities?  
-- ✉️ ddoricent97@gmail.com  
-- 🌐 [LinkedIn](https://www.linkedin.com/in/donald-doricent/)  
+Cypress
 
----
+Selenium
 
-> _“Quality isn’t an act, it’s a process.”_ – adapted from Aristotle  
+Featured Projects
+
+Clay & Petal
+A modern business website designed to showcase products and brand identity.
+
+Bill Harris Art
+An artist portfolio website featuring a responsive gallery and clean layout.
+
+Additional Projects
+
+Other projects included on the site demonstrate both development and testing experience:
+
+Media (In Progress) – mood-based recommendations for movies, podcasts, and books
+
+Spectral Barbershop – small business website with booking-ready layout
+
+Cordoba Art – artist portfolio with a mobile-first gallery
+
+Cypress E2E Portfolio Tests – end-to-end tests verifying key site functionality
+
+Google Search Automation – browser automation project capturing search results
+
+Cookie Clicker Bot – Selenium automation project focused on interaction logic
+
+Project Structure
+portfolio-website/
+│
+├── assets/            Images and GIFs used across the site
+├── qa-docs/           Testing notes and QA artifacts
+├── index.html         Main portfolio page
+├── styles.css         Custom styles
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
+Deployment
+
+The site is deployed using Netlify.
+
+Deployment workflow:
+
+Changes are made locally
+
+Code is committed and pushed to GitHub
+
+Netlify detects the new commit
+
+Netlify automatically builds and deploys the updated site
+
+Contact
+
+Email
+ddoricent97@gmail.com
+
+LinkedIn
+https://linkedin.com/in/dondoricent
